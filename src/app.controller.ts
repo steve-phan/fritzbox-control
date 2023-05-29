@@ -9,4 +9,10 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+  //TODO: remove later, add deviceInfo to device Instance
+  @Get('setupDeviceInfomation')
+  async setupDeviceInfomation(): Promise<string> {
+    const deviceInfo = await this.appService.setupDeviceInfomation();
+    return deviceInfo;
+  }
 }
